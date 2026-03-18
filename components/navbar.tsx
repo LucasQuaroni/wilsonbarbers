@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
@@ -20,11 +21,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary group-hover:shadow-lg group-hover:shadow-primary/50 transition-all duration-300">
-              <span className="text-sm font-bold text-primary-foreground">WB</span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-14 w-14 group-hover:scale-105 transition-transform duration-300">
+              <Image src="/logo.png" alt="Wilson Barbers Logo" fill className="object-contain drop-shadow-lg" />
             </div>
-            <span className="hidden text-lg font-bold text-primary sm:inline">Wilson Barbers</span>
+            <span className="hidden text-2xl font-heading tracking-wider uppercase text-foreground sm:inline group-hover:text-barber-red transition-colors duration-300">Wilson Barbers</span>
           </Link>
 
           {/* Desktop Menu */}

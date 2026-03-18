@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 export default function Footer() {
@@ -10,11 +11,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Branding */}
           <div className="animate-slide-up" style={{ animationDelay: '100ms' }}>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary hover:shadow-lg hover:shadow-primary/50 transition-all duration-300">
-                <span className="text-sm font-bold text-primary-foreground">WB</span>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative h-16 w-16">
+                <Image src="/logo.png" alt="Wilson Barbers Logo" fill className="object-contain drop-shadow-md" />
               </div>
-              <h3 className="text-lg font-bold text-foreground">Wilson Barbers</h3>
+              <h3 className="font-heading tracking-wider uppercase text-2xl text-foreground">Wilson Barbers</h3>
             </div>
             <p className="text-sm text-muted-foreground">
               Tu barbería premium en Rosario, Argentina. Servicios profesionales desde 2020.

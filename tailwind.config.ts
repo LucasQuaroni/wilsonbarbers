@@ -61,6 +61,15 @@ const config: Config = {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        barber: {
+          red: 'hsl(var(--barber-red))',
+          blue: 'hsl(var(--barber-blue))',
+          white: 'hsl(var(--barber-white))',
+        },
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+        heading: ['var(--font-bebas-neue)', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

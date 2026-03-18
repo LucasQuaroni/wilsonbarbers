@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+import { Inter, Bebas_Neue } from 'next/font/google'
 
 import './globals.css'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
-const _geist = Geist({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas-neue' })
 
 export const metadata: Metadata = {
   title: 'Wilson Barbers - Barbería Premium en Rosario',
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark">
-      <body className="font-sans antialiased bg-background text-foreground">
+      <body className={`${inter.variable} ${bebasNeue.variable} font-sans antialiased bg-background text-foreground`}>
         <Navbar />
         <main className="min-h-screen">
           {children}
